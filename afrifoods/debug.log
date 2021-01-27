@@ -1,0 +1,11 @@
+[0123/163045.672:ERROR:directory_reader_win.cc(43)] FindFirstFile: Le chemin d’accès spécifié est introuvable. (0x3)
+[0124/182427.891:ERROR:directory_reader_win.cc(43)] FindFirstFile: Le chemin d’accès spécifié est introuvable. (0x3)
+[0126/082012.985:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0126/083013.008:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0126/083013.016:ERROR:directory_reader_win.cc(43)] FindFirstFile: Le chemin d’accès spécifié est introuvable. (0x3)
+[0126/083013.017:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0126/083013.018:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0127/031118.180:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0127/032618.526:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0127/034120.365:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0127/042644.320:ERROR:crash_report_database_win.cc(455)] unexpected header
