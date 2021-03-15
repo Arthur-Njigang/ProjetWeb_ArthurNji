@@ -1,0 +1,80 @@
+<%- include('header'); -%>
+<style>
+  .dataTables_wrapper label{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+  .dataTables_wrapper{
+    width: 100%;
+  }
+  .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+    color: #fff;
+  }
+  .dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    color: white;
+    padding: 5px;
+    background-color: transparent;
+    margin-left: 3px;
+  }
+  .stat{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+  .stat>div{
+    background: #e75b1e;
+    margin-left: 15px;
+    border-radius: 15px;
+    color: white;
+    padding: 17px;
+  }
+</style>
+<section class="ftco-section" style="padding: 0;">
+  <div class="container">
+    <div class="row stat">
+      <div class="col-md-2"><span style="font-size: 25px;"><%= stat1 %></span><br> repas restant à préparer</div>
+      <div class="col-md-2"><span style="font-size: 25px;"><%= stat2 %></span><br> repas préparés mais pas encore enlevés</div>
+      <div class="col-md-2"><span style="font-size: 25px;"><%= stat3 %></span><br> repas déjà enlevés</div>
+      <div class="col-md-2"><span style="font-size: 25px;">1h</span><br> délai moyen de préparation </div>
+      <div class="col-md-2"><span style="font-size: 25px;"><%= stat5 %></span><br> Dernière mise à jour</div>
+    </div>
+    <div class="row" style="width: 100%;padding: 5rem;">
+      <table  id="tableResto" class="display table table-hover table-checkable order-column m-t-20 width-per-100" style="width: 100%;">
+          <thead>
+              <tr>
+                  <th>Cmd</th>
+                  <th>Nombre de repas</th>
+                  <th>Etat</th>
+                  <th>Enregistrée le</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody class="tableupdated">
+            <% if(cmds.length > 0){ %>
+              <% cmds.forEach((cmd)=>{ %>
+                <tr>
+                    <td><%= cmd.id_cmd %></td>
+                    <td><%= cmd.nbre_repas %></td>
+                    <td>
+                      <!-- <i class="fa fa-check-circle" style="font-size: 18px;color: #e75b1e;"></i> -->
+                      <%= cmd.status %>
+                    </td>
+                    <td><%= cmd.createdat %></td>
+                    <td>
+                        <a href="#" attr-url="/dashboard/cmd-ready/<%= cmd.id_cmd %>" attr-repas="<%= cmd.nbre_repas %>" class="btn btn-tbl-edit readycmd" title="Marquer comme prête">
+                          Marquer comme prête
+                        </a>
+                    </td>
+                </tr>
+              <% }) %>
+            <% } %>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<%- include('footer') -%>

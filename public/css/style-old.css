@@ -1,0 +1,22 @@
+body{
+  background-image: url(/images/Fond2.jpeg);
+}
+.card-text{
+  color: blue;
+
+}
+.titre{
+  color:gray;
+}
+.welcome{
+  color:orange;
+}
+
+h2{
+  color: red;
+  font-size: 45px;
+}
+h4{
+  color: rgb(94, 185, 221);
+}
+

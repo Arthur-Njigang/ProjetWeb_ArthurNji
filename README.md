@@ -1,4 +1,4 @@
-# Projetweb_ArthurNji
+# projweb2-project
 
 Steps to reproduce:
 

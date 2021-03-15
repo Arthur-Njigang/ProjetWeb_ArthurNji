@@ -5,7 +5,7 @@
  */
 
 const app = require('../app');
-const debug = require('debug')('R-vision:server');
+const debug = require('debug')('projweb2-project:server');
 const http = require('http');
 
 /**

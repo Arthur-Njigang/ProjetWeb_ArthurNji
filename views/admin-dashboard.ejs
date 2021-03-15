@@ -1,0 +1,89 @@
+<%- include('header'); -%>
+<style>
+  .dataTables_wrapper label{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+  .dataTables_wrapper{
+    width: 100%;
+  }
+  .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+    color: #fff;
+  }
+  .dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    color: white;
+    padding: 5px;
+    background-color: transparent;
+    margin-left: 3px;
+  }
+  .stat{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+  .stat>div{
+    background: #e75b1e;
+    margin-left: 15px;
+    border-radius: 15px;
+    color: white;
+    padding: 17px;
+  }
+</style>
+<section class="ftco-section" style="padding: 0;">
+  <div class="container">
+    <div class="row stat">
+      <div class="col-md-2"><span style="font-size: 25px;"><%= stat1 %></span><br> repas en cours de préparation</div>
+      <div class="col-md-2"><span style="font-size: 25px;"><%= stat2 %></span><br> repas en attente d’enlèvement</div>
+      <div class="col-md-2"><span style="font-size: 25px;"><%= stat3 %></span><br> repas collectés</div>
+      <div class="col-md-2"><span style="font-size: 25px;"><%= stat4 %></span><br> repas délivrés</div>
+      <div class="col-md-2"><span style="font-size: 25px;"><%= stat5 %></span><br> Dernière mise à jour</div>
+    </div>
+    <div class="row" style="width: 100%;padding: 5rem;">
+      <table  id="tableResto" class="display table table-hover table-checkable order-column m-t-20 width-per-100" style="width: 100%;">
+          <thead>
+              <tr>
+                  <th>Cmd</th>
+                  <th>Adresse de livraison</th>
+                  <th>Restaurant</th>
+                  <th>Date et heure preparation</th>
+                  <th>Livreur</th>
+                  <th>Date et heure enlèvement</th>
+                  <th>Date et heure livraison</th>
+                  <th>Etat</th>
+                  <th>Enregistrée le</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody class="tableupdatedadmin">
+            <% if(cmds.length > 0){ %>
+              <% cmds.forEach((cmd)=>{ %>
+                <tr>
+                    <td><%= cmd.id_cmd %></td>
+                    <td><%= cmd.commune %>, <%= cmd.code_postal %></td>
+                    <td><%= cmd.resto %></td>
+                    <td><%= cmd.preparedat %></td>
+                    <td>Livreur</td>
+                    <td><%= cmd.preparedat %></td>
+                    <td><%= cmd.preparedat %></td>
+                    <td>
+                      <%= cmd.status %>
+                    </td>
+                    <td><%= cmd.createdat %></td>
+                    <td>
+                        <a href="#" attr-id="<%= cmd.id_cmd %>" class="btn btn-tbl-edit cancelcmd">
+                          Annuler
+                        </a>
+                    </td>
+                </tr>
+              <% }) %>
+            <% } %>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<%- include('footer') -%>

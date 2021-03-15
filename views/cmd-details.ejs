@@ -1,0 +1,89 @@
+<%- include('header'); -%>
+<section class="ftco-section" style="padding: 0;">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h2 class="mb-4">Détails de votre commande - <span class="nom_resto"><%= cmd.resto %></span></h2>
+        <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+        <p class="mt-5">Merci d'avoir passer votre commande sur Afri-Food, voici les détails de votre commande : </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="pricing-entry d-flex ftco-animate">
+          <div class="desc pl-3">
+            <div class="d-flex text align-items-center">
+              <h3><span>Nom</span></h3>
+              <span class="price nomcmd"><%= cmd.nom %></span>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-entry d-flex ftco-animate">
+          <div class="desc pl-3">
+            <div class="d-flex text align-items-center">
+              <h3><span>Nombre de repas</span></h3>
+              <span class="price nbre_repascmd"><%= cmd.nbre_repas %></span>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-entry d-flex ftco-animate">
+          <div class="desc pl-3">
+            <div class="d-flex text align-items-center">
+              <h3><span>Rue</span></h3>
+              <span class="price ruecmd"><%= cmd.rue %></span>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-entry d-flex ftco-animate">
+          <div class="desc pl-3">
+            <div class="d-flex text align-items-center">
+              <h3><span>Numéro de maison</span></h3>
+              <span class="price numero_maisoncmd"><%= cmd.numero_maison %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pricing-entry d-flex ftco-animate">
+          <div class="desc pl-3">
+            <div class="d-flex text align-items-center">
+              <h3><span>Numéro de boite</span></h3>
+              <span class="price numero_boitecmd"><%= cmd.numero_boite %></span>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-entry d-flex ftco-animate">
+          <div class="desc pl-3">
+            <div class="d-flex text align-items-center">
+              <h3><span>Code postal</span></h3>
+              <span class="price code_postalcmd"><%= cmd.code_postal %></span>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-entry d-flex ftco-animate">
+          <div class="desc pl-3">
+            <div class="d-flex text align-items-center">
+              <h3><span>Commune</span></h3>
+              <span class="price commune"><%= cmd.commune %></span>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-entry d-flex ftco-animate">
+          <div class="desc pl-3">
+            <div class="d-flex text align-items-center">
+              <h3><span style="font-size: 25px;color: #c44f1c;">Prix</span></h3>
+              <span class="price">€250.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex;justify-content: center;width: 100%;">
+        <a href="#" class="ml-2 btn btn-white btn-outline-white confirm-order">Confirmer la commande</a>
+      </div>
+    </div>
+  </div>
+  <div id="livraison-map" style="width:100%; height:600px;margin-top: 4rem;">
+
+  </div>
+</section>
+<%- include('footer') -%>

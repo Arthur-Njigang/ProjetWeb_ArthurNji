@@ -1,4 +1,287 @@
 <%- include('header'); -%>
-<h1><%= title %></h1>
-<p>Welcome to <%= title %></p>
-<%- include('footer') -%>
+  <!-- <main class="container">
+  <img src="/images/logo.png" alt="">
+  <h1 class="title"><%= title %></h1>
+  <p class="welcome">Welcome to <%= title %> <a href="/Page">link</a></p>
+</main> -->
+  <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
+    <div class="slider-item">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row slider-text align-items-center" data-scrollax-parent="true">
+          <div class="col-md-6 col-sm-12 ftco-animate">
+            <span class="subheading">Delicious</span>
+            <h1 class="mb-4">Cuisine Africaine</h1>
+            <p class="mb-4 mb-md-5">Des plats variés à déguster dans une ambiance moderne et conviviale.
+              Fraîcheur et qualité des produits sont privilégiés chez nous et pour la préparation des plats,
+              Nous privilégions les produits bio belges et locaux.</p>
+
+          </div>
+          <div class="col-md-6 ftco-animate">
+            <img src="images/bg_1.png" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-item">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row slider-text align-items-center" data-scrollax-parent="true">
+          <div class="col-md-6 col-sm-12 order-md-last ftco-animate">
+            <span class="subheading">Appetizing</span>
+            <h1 class="mb-4">Cameroonian Foods</h1>
+            <p class="mb-4 mb-md-5">Varied dishes to taste in a modern and friendly atmosphere.
+              Freshness and quality of the products are privileged with us and for the preparation of the dishes,
+              We privilege the Belgian and local organic products.</p>
+
+          </div>
+          <div class="col-md-6 ftco-animate">
+            <img src="images/bg_2.png" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+          <div class="col-md-7 col-sm-12 text-center ftco-animate">
+            <span class="subheading">Welcome</span>
+            <h1 class="mb-4">We cooked your desired Food Recipe</h1>
+            <p class="mb-4 mb-md-5">Varied dishes to taste in a modern and friendly atmosphere.
+              Freshness and quality of the products are privileged with us and for the preparation of the dishes,
+              We privilege the Belgian and local organic products.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-intro">
+    <div class="container-wrap">
+      <div class="wrap d-md-flex">
+        <div class="info">
+          <div class="row no-gutters">
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="icon"><span class="icon-phone"></span></div>
+              <div class="text">
+                <h3>00 32 466 48 60 47</h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="icon"><span class="icon-my_location"></span></div>
+              <div class="text">
+                <h3>Avenue de couronne 471, 1050 Ixelles</h3>
+                <p>Bruxelles-Belgique</p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="icon"><span class="icon-clock-o"></span></div>
+              <div class="text">
+                <h3>Open Monday-Friday</h3>
+                <p>8:00am - 9:00pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="social d-md-flex pl-md-5 p-4 align-items-center">
+          <ul class="social-icon">
+            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-about d-md-flex">
+    <div class="one-half img" style="background-image: url(images/about.jpg);"></div>
+    <div class="one-half ftco-animate">
+      <div class="heading-section ftco-animate ">
+        <h2 class="mb-4">Bienvenue sur Afri-Food</h2>
+      </div>
+      <div>
+        <p>We welcome you to this new concept of African restaurants which combine tradition,
+          quality of service, quality of products and creative cuisine.
+          <br>
+          Are you looking for a perfect menu to share a surprising meal with friends or family?
+          <br> Afri-food will be happy to offer you the four best restaurants in Brussels,
+          carefully selected for you;</p>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section ftco-services" style="padding: 0;">
+    <!-- <div class="overlay"></div> -->
+    <div id="my-map" style="width:100%; height:600px;">
+
+    </div>
+  </section>
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center">
+          <h2 class="mb-4">Quelques Restaurants</h2>
+          <p>Nous avons sélectionné pour vous le top 4 des restaurants africains de la ville.
+            Passez vos commandes directement en ligne
+            <br>en cliquant sur l'un des restaurants ci dessous.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-wrap">
+      <div class="row no-gutters d-flex">
+        <% restos.forEach((resto,index)=>{ %>
+          <% if(index > 1){ %>
+            <div class="col-lg-6 d-flex ftco-animate">
+              <div class="services-wrap d-flex">
+                <a href="#" class="img order-lg-last" style="background-image: url('<%= resto.image %>');"></a>
+                <div class="text p-4">
+                  <h3><%= resto.nom %></h3>
+                  <p><%= resto.desc %></p>
+                  <p class="price"><span>€<%= resto.prix %></span> <a href="#" class="ml-2 btn btn-white btn-outline-white order-popup" attr-resto="<%= resto.nom %>">Commander</a></p>
+                </div>
+              </div>
+            </div>
+          <% }else{ %>
+            <div class="col-lg-6 d-flex ftco-animate">
+              <div class="services-wrap d-flex">
+                <a href="#" class="img" style="background-image: url('<%= resto.image %>');"></a>
+                <div class="text p-4">
+                  <h3><%= resto.nom %></h3>
+                  <p><%= resto.desc %></p>
+                  <p class="price"><span>€<%= resto.prix %></span> <a href="#" class="ml-2 btn btn-white btn-outline-white order-popup" attr-resto="<%= resto.nom %>">Commander</a></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        <% }) %>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg_2.jpg);"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="row">
+            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+              <div class="block-18 text-center">
+                <div class="text">
+                  <div class="icon"><span class="flaticon-pizza-1"></span></div>
+                  <strong class="number" data-number="10">0</strong>
+                  <span>Food Branches</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+              <div class="block-18 text-center">
+                <div class="text">
+                  <div class="icon"><span class="flaticon-medal"></span></div>
+                  <strong class="number" data-number="5">0</strong>
+                  <span>Number of Awards</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+              <div class="block-18 text-center">
+                <div class="text">
+                  <div class="icon"><span class="flaticon-laugh"></span></div>
+                  <strong class="number" data-number="1054">0</strong>
+                  <span>Happy Customer</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+              <div class="block-18 text-center">
+                <div class="text">
+                  <div class="icon"><span class="flaticon-chef"></span></div>
+                  <strong class="number" data-number="15">0</strong>
+                  <span>Staff</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-appointment">
+    <div class="overlay"></div>
+    <div class="container-wrap">
+      <div class="row no-gutters d-md-flex align-items-center">
+        <div class="col-md-6 d-flex align-self-stretch">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Passez une commande</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" name="restoname" value="">
+          <div class="row" style="padding: 1rem;">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Nom *</label>
+                    <input type="text" class="form-control" name="nom">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Nombre de repas *</label>
+                    <input type="number" class="form-control" name="nbre_repas">
+                    <span class="error-repas" style="display: none;color: red;font-size: 12px;">Ce nombre doit être compris entre 1 et 20</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Rue *</label>
+                    <input type="text" class="form-control" name="rue">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Numéro de maison</label>
+                    <input type="text" class="form-control" name="nbermaison">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Numéro de boite</label>
+                    <input type="text" class="form-control" name="nberboite">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Code postal *</label>
+                    <input type="number" class="form-control" name="codepostal">
+                    <span class="error-codepostal" style="display: none;color: red;font-size: 12px;">Le code postal doit être compris entre 1000 et 9999</span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="">Commune *</label>
+                    <input type="text" class="form-control" name="commune">
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary savecmd">Enregistrer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- include('footer') -%>

@@ -1,8 +1,10 @@
 const createError = require('http-errors');
 const express = require('express');
+const session = require('express-session')
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+// const http = require('http');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -18,6 +20,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+app.use(session({
+  secret : 'test',
+  resave : true,
+  saveUninitialized : true
+}))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -38,5 +47,11 @@ app.use((err, req, res, next) => {
   res.status(status);
   res.render('error', { title: `Error ${status}` });
 });
+
+// const server = http.createServer(app);
+
+// server.listen("3100", ()=> {
+//     console.log('Server is started')
+// })
 
 module.exports = app;
