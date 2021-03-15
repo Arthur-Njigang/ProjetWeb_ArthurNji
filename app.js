@@ -48,10 +48,4 @@ app.use((err, req, res, next) => {
   res.render('error', { title: `Error ${status}` });
 });
 
-// const server = http.createServer(app);
-
-// server.listen("3100", ()=> {
-//     console.log('Server is started')
-// })
-
 module.exports = app;
