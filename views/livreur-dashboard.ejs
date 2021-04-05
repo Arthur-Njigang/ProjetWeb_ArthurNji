@@ -35,15 +35,9 @@
 </style>
 <section class="ftco-section" style="padding: 0;">
   <div class="container">
-    <div class="row stat">
-      <div class="col-md-2"><span style="font-size: 25px;"><%= stat1 %></span><br> repas en cours de préparation</div>
-      <div class="col-md-2"><span style="font-size: 25px;"><%= stat2 %></span><br> repas en attente d’enlèvement</div>
-      <div class="col-md-2"><span style="font-size: 25px;"><%= stat3 %></span><br> repas collectés</div>
-      <div class="col-md-2"><span style="font-size: 25px;"><%= stat4 %></span><br> repas délivrés</div>
-      <div class="col-md-2"><span style="font-size: 25px;"><%= stat5 %></span><br> Dernière mise à jour</div>
-    </div>
+    <p style="margin-top: 3rem;font-size: 19px;color: white;">Bienvenue, <%= user %></p>
     <div class="row" style="width: 100%;padding: 5rem;">
-      <table  id="tableResto" class="display table table-hover table-checkable order-column m-t-20 width-per-100" style="width: 100%;">
+      <table  id="tableResto2" class="display table table-hover table-checkable order-column m-t-20 width-per-100" style="width: 100%;">
           <thead>
               <tr>
                   <th>Cmd</th>
@@ -52,13 +46,12 @@
                   <th>Date et heure preparation</th>
                   <th>Livreur</th>
                   <th>Date et heure enlèvement</th>
-                  <th>Date et heure livraison</th>
                   <th>Etat</th>
                   <th>Enregistrée le</th>
                   <th>Actions</th>
               </tr>
           </thead>
-          <tbody class="tableupdatedadmin">
+          <tbody class="tableupdatedlivreur">
             <% if(cmds.length > 0){ %>
               <% cmds.forEach((cmd)=>{ %>
                 <tr>
@@ -66,16 +59,15 @@
                     <td><%= cmd.commune %>, <%= cmd.code_postal %></td>
                     <td><%= restos.filter( champ => champ.id == cmd.resto )[0].nom %></td>
                     <td><%= cmd.preparedat %></td>
-                    <td>Livreur</td>
-                    <td><%= cmd.preparedat %></td>
+                    <td> - </td>
                     <td><%= cmd.preparedat %></td>
                     <td>
                       <%= cmd.status %>
                     </td>
                     <td><%= cmd.createdat %></td>
                     <td>
-                        <a href="#" attr-id="<%= cmd.id_cmd %>" class="btn btn-tbl-edit cancelcmd">
-                          Annuler
+                        <a href="#" attr-id="<%= cmd.id_cmd %>" class="btn btn-tbl-edit">
+                          Livrer
                         </a>
                     </td>
                 </tr>
@@ -84,6 +76,9 @@
           </tbody>
       </table>
     </div>
+  </div>
+  <div id="livreur-map" style="width:100%; height:600px;margin-top: 4rem;">
+
   </div>
 </section>
 <%- include('footer') -%>

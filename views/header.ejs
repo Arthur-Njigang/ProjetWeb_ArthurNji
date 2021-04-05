@@ -4,9 +4,10 @@
 <!-- Mirrored from preview.colorlib.com/theme/pizza/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Mar 2021 10:00:55 GMT -->
 
 <head>
-    <title>Afri-Food - <%= title %>></title>
+    <title>Afri-Food - <%= title %></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/favicon.ico"/>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
@@ -82,7 +83,7 @@
                       <label for="">Sélectionnez votre restaurant *</label>
                       <select name="resto_login" id="resto_login">
                         <% restos.forEach((resto,index)=>{ %>
-                            <option value="<%= resto.nom %>"><%= resto.nom %></option>
+                            <option value="<%= resto.id %>"><%= resto.nom %></option>
                         <% }) %>
                       </select>
                   </div>
@@ -90,13 +91,13 @@
                 <div class="col-md-6 livreur_login" style="display: none;">
                   <div class="form-group">
                       <label for="">Votre nom *</label>
-                      <input type="text" name="nom_livreur">
+                      <input type="text" class="nom_livreur">
                   </div>
                 </div>
                 <div class="col-md-6 livreur_login" style="display: none;">
                   <div class="form-group">
                       <label for="">Votre prénom *</label>
-                      <input type="text" name="prenom_livreur">
+                      <input type="text" class="prenom_livreur">
                   </div>
                 </div>
             </div>
@@ -108,4 +109,3 @@
         </div>
       </div>
     </div>
-</body>

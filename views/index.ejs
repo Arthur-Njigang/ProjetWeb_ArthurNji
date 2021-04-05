@@ -1,9 +1,5 @@
-<%- include('header'); -%>
-  <!-- <main class="container">
-  <img src="/images/logo.png" alt="">
-  <h1 class="title"><%= title %></h1>
-  <p class="welcome">Welcome to <%= title %> <a href="/Page">link</a></p>
-</main> -->
+<%- include('header') -%>
+
   <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
     <div class="slider-item">
       <div class="overlay"></div>
@@ -138,7 +134,7 @@
                 <div class="text p-4">
                   <h3><%= resto.nom %></h3>
                   <p><%= resto.desc %></p>
-                  <p class="price"><span>€<%= resto.prix %></span> <a href="#" class="ml-2 btn btn-white btn-outline-white order-popup" attr-resto="<%= resto.nom %>">Commander</a></p>
+                  <p class="price"><span>€<%= resto.prix %></span> <a href="#" class="ml-2 btn btn-white btn-outline-white order-popup" attr-resto="<%= resto.id %>">Commander</a></p>
                 </div>
               </div>
             </div>
@@ -149,7 +145,7 @@
                 <div class="text p-4">
                   <h3><%= resto.nom %></h3>
                   <p><%= resto.desc %></p>
-                  <p class="price"><span>€<%= resto.prix %></span> <a href="#" class="ml-2 btn btn-white btn-outline-white order-popup" attr-resto="<%= resto.nom %>">Commander</a></p>
+                  <p class="price"><span>€<%= resto.prix %></span> <a href="#" class="ml-2 btn btn-white btn-outline-white order-popup" attr-resto="<%= resto.id %>">Commander</a></p>
                 </div>
               </div>
             </div>
@@ -284,4 +280,5 @@
       </div>
     </div>
   </div>
+
   <%- include('footer') -%>
