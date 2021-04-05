@@ -1,23 +1,27 @@
 [
     {
+        "id": "1",
         "nom": "CAP AFRICA",
         "desc": "Fufu & Eru spécialité du sud ouest Cameroun.",
         "prix": "18.00",
-        "image": "/images/Ntaba de chèvre.jpg"
+        "image": "images/bg_2.png"
     },
     {
+        "id": "2",
         "nom": "BOIS D'EBENE BRUXELLES",
         "desc": "Chèvre grillée aux épices: spécialité Congolaise.",
         "prix": "15.00",
-        "image": "images/pizza-2.jpg"
+        "image": "images/special-menu-3.jpg"
     },
     {
+        "id": "3",
         "nom": "LE PELISSON",
         "desc": "Poisson Bar entier grillé aux herbes et aux fécules de manioc cuit.",
         "prix": "25.00",
-        "image": "images/Bar braisé.jpg"
+        "image": "images/bar-braise.jpg"
     },
     {
+        "id": "4",
         "nom": "LE VIEUX MILA",
         "desc": "Du bon Ndolé de crevettes: spécialité Camerounaise.",
         "prix": "15.00",
